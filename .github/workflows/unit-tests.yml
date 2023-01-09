@@ -1,6 +1,6 @@
 name: unit-tests
 run-name: The workflow runs all the unit tests to make sure the code works correctly
-on: [push, pull_request]
+on: [push, pull_request] # The same job will run twice as both the push and pull_request events go together
 jobs:
   run-unit-tests:
     runs-on: ubuntu-latest
