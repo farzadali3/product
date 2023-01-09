@@ -23,7 +23,7 @@ const saveProduct = (newProduct, done) => {
   if(!isExists) {
     productsList.push(newProduct);
     updatedProductList = { products: productsList };
-    fs.writeFile('./products.json', JSON.stringify(updatedProductList), function (err) {
+    fs.writeFile(__dirname + './products.json', JSON.stringify(updatedProductList), function (err) {
       if (err) throw err;
     });
     return done(null, JSON.stringify(productsList));
